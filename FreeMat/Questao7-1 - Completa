@@ -1,0 +1,165 @@
+ FreeMat v4.2
+
+ Copyright (c) 2002-2008 by Samit Basu
+
+ Licensed under the GNU Public License (GPL)
+
+ Type <help license> to find out more
+
+      <helpwin> for online help
+
+      <pathtool> to set or change your path
+
+ Use <dbauto on/off> to control stop-on-error behavior
+
+ Use ctrl-b to stop execution of a function/script
+
+ JIT is enabled by default - use jitcontrol to change it
+
+ Use <rootpath gui> to set/change where the FreeMat toolbox is installed
+
+--> t = 0:1./pi:800;
+
+--> w = t;
+
+--> t = 0:1./pi:800*pi;
+
+--> w = t;
+
+--> a = 480*pi;
+
+--> k = a;
+
+--> hw = k./(sqrt(w.^2 + a.^2));
+
+
+
+-->
+
+--> plot(w,hw)
+
+--> grid on
+
+--> xlabel('rad/s')
+
+--> ylabel('|H(w)|'
+
+Error: Unexpected input
+
+
+
+     ylabel('|H(w)|'
+
+          ^
+
+--> ylabel('|H(w)|')
+
+--> fc = 1./sqrt(2)
+
+
+
+fc =
+
+    0.7071
+
+
+
+--> hold on
+
+-->  plot(a,fc,'*k)
+
+Error: unterminated string
+
+
+
+      plot(a,fc,'*k)
+
+               ^
+
+-->  plot(a,fc,'*k');
+
+--> subplot(2,1,1);
+
+--> plot(w,hw2)
+
+Error: Undefined function or variable hw2
+
+--> plot(w,hw)
+
+--> grid on
+
+--> hold on
+
+-->  plot(a,fc,'*k');
+
+--> subplot(2,2,1);
+
+--> a2 = 144*pi;
+
+--> k2 = 1;
+
+--> fc2 = 0.3;
+
+--> hw2 = k2 - ((k2*w)./(sqrt(a2.^2 + w.^2)));
+
+--> plot(w,hw2)
+
+--> subplot(2,1,1);
+
+--> plot(w,hw)
+
+--> hold on
+
+--> grid on
+
+--> plot(a,fc,'*r')
+
+--> subplot(1,1,1);
+
+--> plot(w,hw2)
+
+--> subplot(2,1,1);
+
+--> plot(w,hw)
+
+--> subplot(2,1,2);
+
+--> plot(w,hw2)
+
+--> subplot(2,1,1);
+
+--> grid on
+
+--> hold on
+
+--> plot(a,fc,'*r')
+
+--> subplot(2,1,2);
+
+--> grid on
+
+--> hold on
+
+--> plot(a2,fc2,'*b')
+
+--> plot(a2,fc2,'*r')
+
+--> subplot(2,1,1);
+
+--> xlabel('rad/s');
+
+--> ylabel('|H(w)|');
+
+--> subplot(2,1,2);
+
+--> xlabel('rad/s');
+
+--> ylabel('|H(w)|');
+
+--> ylabel('|H2(w)|');
+
+--> subplot(2,1,1);
+
+--> ylabel('|H1(w)|');
+
+-->
